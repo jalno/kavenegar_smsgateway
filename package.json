@@ -1,0 +1,16 @@
+{
+	"autoload": {
+		"directories": ["libraries", "listeners"]
+	},
+	"dependencies": ["base", "sms", "userpanel"],
+	"events": [
+		{
+			"name":"packages/sms/events/gateways",
+			"listener": "listeners/settings/SMS@gatewaysList"
+		}
+	],
+	"frontend": "frontend",
+	"languages":{
+		"fa_IR" : "langs/fa_IR.json"
+	}
+}
