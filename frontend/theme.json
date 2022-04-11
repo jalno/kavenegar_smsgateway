@@ -1,0 +1,7 @@
+{
+    "name" : "clipone",
+    "title":"clipone",
+    "assets" : [
+        {"type": "less","file":"assets/less/main.less"}
+    ]
+}

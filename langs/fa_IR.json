@@ -1,0 +1,14 @@
+{
+	"author": {
+		"name" : "Hossein Hosni",
+		"website" : "http://hosseinhosni.ir/"
+	},
+	"rtl": true,
+	"phrases":{
+		"sms.gateway.kavenegar" : "کاوه نگار",
+		"settings.sms.gateways.kavenegar.apikey": "کلید API",
+		"settings.sms.gateways.kavenegar.get_apikey": "دریافت کلید",
+		"settings.kavenegar_smsgateway" : "تنظیمات پنل پیامک کاوه نگار",
+		"cronjob.task.name.kavenegar_smsgateway_update_info": "بروزرسانی اطلاعات حساب کاربری (موجودی) پنل پیامک کاوه نگار"
+	}
+}
