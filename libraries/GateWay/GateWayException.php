@@ -8,9 +8,6 @@ class GateWayException extends ParentGateWayException
 {
     protected ?\Throwable $previous = null;
 
-    /**
-     * @param mixed $data
-     */
     public function __construct($data, ?\Throwable $previous = null)
     {
         parent::__construct($data);

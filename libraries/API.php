@@ -6,14 +6,16 @@ use packages\base\Exception;
 use packages\base\HTTP;
 use packages\base\Json;
 use packages\base\Log;
-use function packages\base\Utility\GetTelephoneWithDialingCode;
 use packages\kavenegar_smsgateway\GateWay\GateWayException;
 use packages\sms\GateWay;
 use packages\sms\GateWay\Handler as ParentHandler;
 use packages\sms\Sent;
 
+use function packages\base\Utility\GetTelephoneWithDialingCode;
+
 /**
  * @template T
+ *
  * @phpstan-type ResponseType array{
  *      'return':ReturnType,
  *      'entries':T
@@ -22,7 +24,6 @@ use packages\sms\Sent;
  *      'status':int,
  *      'message':string,
  * }
- *
  * @phpstan-type SendEntryType array{
  *      'messageid':int,
  *      'message':string,
@@ -102,9 +103,9 @@ class API extends ParentHandler
     /**
      * try to send SMS to given number.
      *
-     * @throws GatewayException on error
-     *
      * @return int that may be Sent::sent or Sent::failed that indicates the result
+     *
+     * @throws GateWayException on error
      */
     public function send(Sent $sms)
     {
