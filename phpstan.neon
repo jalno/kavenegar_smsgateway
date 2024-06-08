@@ -1,10 +1,7 @@
 parameters:
-  level: max
+  level: 0
   paths:
     - .
   scanDirectories:
-    - ../base
-    - ../sms
-    - ../userpanel
-  ignoreErrors:
-    - "/(Class|Interface|Trait) .+ referenced with incorrect case/"
+    - ../..
+

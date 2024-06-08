@@ -6,10 +6,10 @@ use packages\base\Exception;
 use packages\base\HTTP;
 use packages\base\Json;
 use packages\base\Log;
-use function packages\base\utility\getTelephoneWithDialingCode;
-use packages\kavenegar_smsgateway\Gateway\GatewayException;
-use packages\sms\Gateway;
-use packages\sms\Gateway\Handler as ParentHandler;
+use function packages\base\Utility\GetTelephoneWithDialingCode;
+use packages\kavenegar_smsgateway\GateWay\GateWayException;
+use packages\sms\GateWay;
+use packages\sms\GateWay\Handler as ParentHandler;
 use packages\sms\Sent;
 
 /**
@@ -59,7 +59,7 @@ class API extends ParentHandler
 
     protected ?HTTP\Client $httpClient = null;
 
-    public function __construct(Gateway $gateway)
+    public function __construct(GateWay $gateway)
     {
         $apiKey = $gateway->param('kavenegar_apikey');
         if (!$apiKey) {
@@ -144,10 +144,10 @@ class API extends ParentHandler
             }
         } catch (HTTP\ResponseException $e) {
             $log->reply()->error('faild! exception: '.get_class($e), 'request:', $e->getRequest(), 'response:', $e->getResponse());
-            throw new GatewayException($e->getResponse()->getBody(), $e);
+            throw new GateWayException($e->getResponse()->getBody(), $e);
         } catch (Json\JsonException $e) {
             $log->reply()->error('faild! json exception: body: '.$body);
-            throw new GatewayException($body, $e);
+            throw new GateWayException($body, $e);
         }
 
         return Sent::failed;

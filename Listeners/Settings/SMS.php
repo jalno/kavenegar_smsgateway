@@ -1,17 +1,17 @@
 <?php
 
-namespace packages\kavenegar_smsgateway\listeners\settings;
+namespace packages\kavenegar_smsgateway\Listeners\Settings;
 
 use packages\kavenegar_smsgateway\API;
-use packages\sms\events\Gateways as GatewaysEvent;
+use packages\sms\Events\GateWays as GateWaysEvent;
 
 class SMS
 {
-    public function gatewaysList(GatewaysEvent $gateways): void
+    public function gatewaysList(GateWaysEvent $gateways): void
     {
         $fieldName = fn (string $name) => API::GATEWAY_NAME.'_'.$name;
 
-        $gateway = new GatewaysEvent\Gateway(API::GATEWAY_NAME);
+        $gateway = new GateWaysEvent\GateWay(API::GATEWAY_NAME);
         $gateway->setHandler(API::class);
 
         $gateway->addInput([

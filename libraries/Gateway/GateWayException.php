@@ -1,10 +1,10 @@
 <?php
 
-namespace packages\kavenegar_smsgateway\Gateway;
+namespace packages\kavenegar_smsgateway\GateWay;
 
-use packages\sms\Gateway\GatewayException as ParentGatewayException;
+use packages\sms\GateWay\GateWayException as ParentGateWayException;
 
-class GatewayException extends ParentGatewayException
+class GateWayException extends ParentGateWayException
 {
     protected ?\Throwable $previous = null;
 
