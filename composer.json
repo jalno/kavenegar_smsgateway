@@ -1,0 +1,17 @@
+{
+    "name": "jalno/kavenegar-smsgateway",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "jalno/base":"@dev",
+        "jalno/sms" : "@dev",
+        "jalno/userpanel" :"@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "packages\\kavenegar_smsgateway\\": ["libraries/"]
+        }
+    }
+}
