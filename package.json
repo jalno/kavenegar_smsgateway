@@ -2,11 +2,10 @@
 	"autoload": {
 		"directories": ["libraries", "listeners"]
 	},
-	"dependencies": ["base", "sms", "userpanel"],
 	"events": [
 		{
-			"name":"packages/sms/events/gateways",
-			"listener": "listeners/settings/SMS@gatewaysList"
+			"name":"packages/sms/Events/GateWays",
+			"listener": "packages/kavenegar_smsgateway/Listeners/Settings/SMS@gatewaysList"
 		}
 	],
 	"frontend": "frontend",
